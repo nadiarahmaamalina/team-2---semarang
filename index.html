@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navbar</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div>
+            <a href="#" class="logo">Team 2 Semarang</a>
+        </div>
+        <div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#dashboard">Dashboard</a></li>
+                <li><a href="#recommendation">Recommendation</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!--home section isi disini-->
+    <section id="home">
+        <div class="overlay">
+            <div class="hero">
+                <h1>Team 2 - Semarang</h1>
+                <h2>
+                    RevoU Tech Academy Data Analytics & Software Engineering with AI
+                </h2>
+                <h3>Analisis Penjualan Perusahaan Vending Machine</h3>
+            </div>
+        </div>
+        <div class="about-hero">
+            <a href="#about" class="btn" id="startnow">Start Now</a>
+        </div>
+    </section>
+
+    <!--about section isi disini-->
+    <section id="about">
+        <div class="content1">
+            <img class="animated" src="vending.jpg" />
+            <div class="text">
+                <h3 class="animated">vending machine</h3>
+                <p class="animated">
+                    Vending machine merupakan suatu alat atau mesin seperti ATM dan
+                    berbentuk seperti kulkas kaca yang berfungsi untuk menjual makanan
+                    atau minuman ringan secara otomatis tanpa adanya kasir atau operator,
+                    sehingga apabila hendak membeli produk yang berada pada vending
+                    machine cukup dengan memasukkan uang koin atau uang kertas kedalam
+                    mesin tanpa ada orang atau operator yang menjual produk dan produk
+                    yang berada di dalam vending machine akan keluar secara otomatis
+                    setelah uang terhitung sesuai harga barang.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!--dashboard section isi disini-->
+    <section id="dashboard">
+        <div class="judul">
+            <h2>Dashboard</h2>
+        </div>
+
+        <div>
+            <label for="quarterSelect">Select Quarter:</label>
+            <select id="quarterSelect">
+                <option value="all">All</option>
+                <option value="Q1">Q1</option>
+                <option value="Q2">Q2</option>
+                <option value="Q3">Q3</option>
+                <option value="Q4">Q4</option>
+            </select>
+        </div>
+        <div class="myChart">
+            <section id="lineChart">
+                <!--line chart perlu dirapihin-->
+                <canvas id="myChart"></canvas>
+            </section>
+            <!--top product by sales-->
+            <section class="topsales">
+                <canvas id="Horizontal"></canvas>
+            </section>
+            <!--top product by quantity-->
+            <section class="topsquantity">
+                <canvas id="Horizontal2"></canvas>
+            </section>
+            <!--wilayah Penjualan-->
+            <section class="wilayah">
+                <canvas id="doughnut1"></canvas>
+            </section>
+            <!--transaksi favorit pelanggan -->
+            <section class="bar1">
+                <canvas id="bar1"></canvas>
+            </section>
+            <!--produk yang paling sering dibeli konsumen-->
+            <section class="bar2">
+                <canvas id="bar2"></canvas>
+            </section>
+            <!--produk yang paling memberi profit-->
+            <section class="bar3">
+                <canvas id="bar3"></canvas>
+            </section>
+        </div>
+
+        <script src="line.js"></script>
+        <script src="doughnut1.js"></script>
+        <script src="horizontal.js"></script>
+        <script src="horizontal2.js"></script>
+        <script src="bar1.js"></script>
+        <script src="horizontal3.js"></script>
+        <script src="horizontal4.js"></script>
+    </section>
+    <!--recomendation isi disini-->
+    <section id="recommendation">
+        <div class="judul">
+            <h2>Recommendation</h2>
+        </div>
+        <div class="content">
+            <p class="text-content">
+                Berdasarkan analisis yang sudah dilakukan, beberapa rekomendasi yang
+                dapat peruahsaan gunakan untuk meningkatkan penjualan perusahaan
+                vending machine adalah sebagai berikut :
+            </p>
+            <ul class="text-content">
+                <li class="text-content">
+                    Berdasarkan lokasi dengan tingkat penjualan tertinggi, sebaiknya
+                    menambahkan jumlah produk yang dijual di vending machine yang
+                    berlokasi di GuttenPlans serta memprioritaskan kualitas pelayanan
+                    dan kualitas mesin disana
+                </li>
+                <li class="text-content">
+                    Berdasarkan tingkat penjualan pada setiap kuartal di tahun 2022,
+                    sebaiknya meningkatkan kualitas dan kuantitas produk pada kuartal
+                    ke-3 yaitu pada bulan Juli sampai dengan bulan September karena pada
+                    kuartal tersebut merupakan kuartal dengan jumlah penjualan tertinggi
+                </li>
+                <li class="text-content">
+                    Berdasarkan metode transaksi, mayoritas customer memilih untuk
+                    menggunakan cash, sebaiknya meningkatkan kualitas pelayanan customer
+                    yang memilih metode transaksi menggunakan cash untuk menarik minat
+                    customer untuk terus membeli di vending machine tersebut. Selain itu
+                    juga meningkatkan minat para customer untuk menggunakan credit
+                    dengan memberikan promo tertentu
+                </li>
+                <li class="text-content">
+                    Berdasarkan jenis produk yang memberikan profit tertinggi, yaitu
+                    Monster Energy Original, perusahaan dapat menambah stok dari produk
+                    tersebut dengan tujuan meningkatkan profit
+                </li>
+                <li class="text-content">
+                    Berdasarkan jenis produk yang paling diminati oleh customer yaitu
+                    Coca Cola Zero Sugar, perusahaan dapat menaikkan harga produk untuk
+                    meningkatkan profit dan dilakukan analisis lebih lanjut apakah
+                    dengan menaikkan harga memberikan pengaruh besar terhadap minat
+                    customer
+                </li>
+            </ul>
+        </div>
+    </section>
+    <!---Feedback Form-->
+    <div id="QA">
+        <div class="QA">
+            <h2>Feedback Form</h2>
+        </div>
+        <div class="main-QA">
+            <div class="QA-content1">
+                <p class="p1-QA">Send us your feedback!</p>
+                <p class="p2-QA">Do you have a suggestion or found some bug?
+                    let us know in the field bellow.
+                </p>
+            </div>
+            <div id="QA2">
+                <div class="QA-content2">
+                    <p class="p1-QA2">How was your experiance?</p>
+                    <div class="emoji">
+                        <span>😡</span>
+                        <span>😐</span>
+                        <span>😊</span>
+                    </div>
+                    <form class="form" id="form" action="mailto:team2.tasmgrevou2@gmail.com" method="post"
+                        enctype="text/plain">
+                        <textarea class="text-QA2" placeholder="Describe your experiance here.."></textarea>
+                        <div class="form-button">
+                            <button type="submit" class="button cta primary">
+                                Send Message
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--Footer-->
+
+    <div class="img-footer">
+    </div>
+    <footer class="footer">
+        <div class="footer-left">
+            <h2>Team 2 Semarang</h2>
+        </div>
+        <div class="footer-center">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Dashboard</a></li>
+                <li><a href="#">Recommendation</a></li>
+            </ul>
+        </div>
+        <div class="footer-right">
+            <h2>Contact Us</h2>
+            <div class="contact-icons">
+                <p>
+                    <i class="fas fa-envelope"></i>
+                    tim2revou2@gmail.com
+                </p>
+                <p>
+                    <i class="fas fa-phone"></i>
+                    +628123456789
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2024 Team 2 Semarang Capstone. All rights reserved
+        </div>
+    </footer>
+
+</body>
+
+</html>
